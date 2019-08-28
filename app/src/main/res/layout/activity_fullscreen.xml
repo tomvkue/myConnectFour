@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#0099cc"
+             tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/turnDisplay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/resetButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_centerInParent="true"
+                        android:onClick="reset"
+                        android:text="@string/resetText"
+                        android:textAllCaps="true"
+                        android:textIsSelectable="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/boardLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:id="@+id/row1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r1c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r1c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r2c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r2c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r3c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r3c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r4c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r4c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r5c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r5c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/r6c1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+
+                    <ImageView
+                        android:id="@+id/r6c7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:onClick="place" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+</FrameLayout>
